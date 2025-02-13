@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY VALENTINES</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family:'Times New Roman', Times, serif;
+            background-image: url('Untitled design (27).png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: red;
+            background-color: white;
+            border: 1px solid black;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 15px;
+            font-size: 60px;
+        }
+        p {
+            color: red;
+            background-color: white;
+            border: 1px solid black;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 30px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            margin-right: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: red;
+        }
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>WILL YOU BE MY VALENTINE?</h1>
+    <div class="buttons">
+        <button onclick="document.getElementById('message').style.display='block'">Yes</button>
+        <button id="noButton" onclick="moveNoButton()">No</button>
+    </div>
+    <p id="message" style="display: none;">Mweheheheheh sige bukas ;)</p>
+    
+    <script>
+        function moveNoButton() {
+            let noButton = document.getElementById("noButton");
+            noButton.style.left = Math.random() * window.innerWidth + "px";
+            noButton.style.top = Math.random() * window.innerHeight + "px";
+        }
+    </script>
+</body>
+</html>
